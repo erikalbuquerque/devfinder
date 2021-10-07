@@ -1,59 +1,74 @@
+import { useUser } from '../../hooks/useUser';
+
 import { ImLocation } from 'react-icons/im';
 import { BsLink45Deg, BsTwitter } from 'react-icons/bs';
+import { BiBuildings } from 'react-icons/bi';
 
 import styles from './styles.module.scss';
 
 export function CardProfile() {
+	const { user } = useUser();
 	return (
 		<div className={styles.cardProfileContainer}>
-			<header>
-				<img src="https://avatars.githubusercontent.com/u/39579838?v=4" alt="user" />
-				<div className={styles.cardProfileTexts}>
-					<strong>the octocat</strong>
-					<a href="#">@octocat</a>
-					<span>This profile has no bio</span>
-				</div>
-				<span>Joined 25 Jan 2011</span>
-			</header>
+			{user.name ? (
+				<>
+					<header>
+						<img src={user.avatar_url} alt={user.name} />
+						<div className={styles.cardProfileTexts}>
+							<strong>{user.name}</strong>
+							<a href={user.html_url}>@{user.login}</a>
+							<span>{user.bio ? user.bio : 'This profile has no bio'}</span>
+						</div>
+						<span>
+							Joined{' '}
+							{user.created_at && new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(
+								new Date(user.created_at)
+							)}
+						</span>
+					</header>
 
-			<div className={styles.cardProfileInformation}>
-				<div className={styles.cardProfileNetwork}>
-          <div>
-            <span>Repos</span>
-            <span>8</span>
-          </div>
-          <div>
-            <span>Followers</span>
-            <span>3983</span>
-          </div>
-          <div>
-            <span>Following</span>
-            <span>9</span>
-          </div>
-        </div>
-				<div className={styles.cardProfileSociais}>
-					<div>
-						<span>
-							<ImLocation />
-							San Francisco
-						</span>
-						<span>
-							<BsLink45Deg />
-							https://github.blog
-						</span>
+					<div className={styles.cardProfileInformation}>
+						<div className={styles.cardProfileNetwork}>
+							<div>
+								<span>Repos</span>
+								<span>{user.public_repos}</span>
+							</div>
+							<div>
+								<span>Followers</span>
+								<span>{user.followers}</span>
+							</div>
+							<div>
+								<span>Following</span>
+								<span>{user.following}</span>
+							</div>
+						</div>
+						<div className={styles.cardProfileSociais}>
+							<div>
+								<span className={user.location ? '' : styles.notAvaliable}>
+									<ImLocation />
+									{user.location ? user.location : 'Not Available'}
+								</span>
+								<span className={user.blog ? '' : styles.notAvaliable}>
+									<BsLink45Deg />
+									{user.blog ? user.blog : 'Not Available'}
+								</span>
+							</div>
+							<div>
+								<span className={user.twitter_username ? '' : styles.notAvaliable}>
+									<BsTwitter />
+									{user.twitter_username ? user.twitter_username : 'Not Available'}
+								</span>
+								<span className={user.company ? '' : styles.notAvaliable}>
+									<BiBuildings />
+									{user.company ? user.company : 'Not Available'}
+								</span>
+							</div>
+						</div>
 					</div>
-          <div>
-						<span className={styles.notAvaliable}>
-							<BsTwitter />
-							Not Available
-						</span>
-						<span>
-            <BsTwitter />
-							@github
-						</span>
-					</div>
-				</div>
-			</div>
+				</>
+			) : (
+				<h1>not yet...</h1>
+			)}
 		</div>
 	);
 }
