@@ -25,6 +25,7 @@
             }
             span {
                 font-size: 0.875rem;
+                margin: 0;
                 color: var(--manatee-500);
             }
         }
@@ -84,5 +85,11 @@
                 }
             }
         }
+    }
+    .alertMessage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
     }
 }

@@ -3,6 +3,7 @@ import { useUser } from '../../hooks/useUser';
 import { ImLocation } from 'react-icons/im';
 import { BsLink45Deg, BsTwitter } from 'react-icons/bs';
 import { BiBuildings } from 'react-icons/bi';
+import { FaGithub } from 'react-icons/fa';
 
 import styles from './styles.module.scss';
 
@@ -67,7 +68,13 @@ export function CardProfile() {
 					</div>
 				</>
 			) : (
-				<h1>not yet...</h1>
+				<div className={styles.alertMessage}> 
+					<FaGithub size={70}/>
+					<div>
+						<h1>Oops!</h1>
+						<span>its seems something went wrong.</span>
+					</div>
+				</div>
 			)}
 		</div>
 	);
