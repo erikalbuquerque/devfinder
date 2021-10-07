@@ -1,0 +1,31 @@
+.headerContainer {
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.headerContent {
+    display: flex;
+    align-items: center;
+    h1 {
+        font-size: 1.5rem;
+    }
+    button {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        font-size: 0.75rem;
+        font-weight: bold;
+        gap: 1rem;
+        border: 0;
+        background: transparent;
+        color: var(--white);
+        transition: filter 0.2s;
+        &:hover {
+            filter: brightness(0.8);
+        }
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
