@@ -1,0 +1,88 @@
+.cardProfileContainer {
+    margin: 1rem;
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    background: var(--gray-900);
+    header {
+        display: flex;
+        flex-direction: row;
+        img {
+            width: 7rem;
+            height: 7rem;
+            border-radius: 7rem;
+        }
+        .cardProfileTexts {
+            margin-left: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            strong {
+                font-size: 1.5rem;
+            }
+            a {
+                color: var(--purple-500);
+                font-size: 0.813rem;
+            }
+            span {
+                font-size: 0.875rem;
+                color: var(--manatee-500);
+            }
+        }
+        span {
+            margin-left: auto;
+            font-size: 0.813rem;
+            color: var(--manatee-300);
+        }
+    }
+    .cardProfileInformation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-left: 9rem;
+        .cardProfileNetwork {
+            display: flex;
+            flex-direction: row;
+            gap: 4rem;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            background: var(--background-dark);
+            div {
+                display: flex;
+                flex-direction: column;
+                span {
+                    color: var(--manatee-300);
+                    font-size: 0.75rem;
+                }
+                span+span {
+                    color: var(--white);
+                    font-size: 1rem;
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+        .cardProfileSociais {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: row;
+            gap: 4rem;
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                span {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 0.875rem;
+                    svg {
+                        margin-right: 1rem;
+                    }
+                    &.notAvaliable {
+                        color: var(--manatee-500);
+                    }
+                }
+            }
+        }
+    }
+}
