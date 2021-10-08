@@ -1,3 +1,4 @@
+import { useTheme } from '../../hooks/useTheme';
 import { useUser } from '../../hooks/useUser';
 
 import { ImLocation } from 'react-icons/im';
@@ -8,9 +9,13 @@ import { FaGithub } from 'react-icons/fa';
 import styles from './styles.module.scss';
 
 export function CardProfile() {
+	const { theme } = useTheme();
 	const { user } = useUser();
+
+	const dark = theme === "light" && styles.dark;
+
 	return (
-		<div className={styles.cardProfileContainer}>
+		<div className={`${styles.cardProfileContainer} ${dark}`}>
 			{user.name ? (
 				<>
 					<header>

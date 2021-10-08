@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTheme } from '../../hooks/useTheme';
 import { useUser } from '../../hooks/useUser';
 
 import toast, { Toaster } from 'react-hot-toast';
@@ -8,6 +9,7 @@ import { FiSearch } from 'react-icons/fi';
 import styles from './styles.module.scss';
 
 export function SearchBar() {
+	const { theme } = useTheme();
 	const { searchUser } = useUser();
 	const [ username, setUsername ] = useState('');
 
@@ -20,9 +22,11 @@ export function SearchBar() {
 		setUsername('');
 	}
 
+	const dark = theme === "light" && styles.dark;
+
 	return (
 		<div className={styles.searchBarContainer}>
-			<div className={styles.searchBarContent}>
+			<div className={`${styles.searchBarContent} ${dark}`}>
 				<FiSearch />
 				<input
 					type="text"

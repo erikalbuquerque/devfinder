@@ -29,3 +29,12 @@
         }
     }
 }
+
+.headerContent.dark {
+    h1 {
+        color: var(--gray-800);
+    }
+    button {
+        color: var(--gray-800);
+    }
+}

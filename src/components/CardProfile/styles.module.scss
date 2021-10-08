@@ -22,6 +22,7 @@
             a {
                 color: var(--purple-500);
                 font-size: 0.813rem;
+                font-weight: bold;
                 &:hover {
                     text-decoration: underline;
                 }
@@ -101,5 +102,42 @@
         align-items: center;
         justify-content: center;
         gap: 1rem;
+    }
+}
+
+.cardProfileContainer.dark {
+    background: var(--white);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    span {
+        color: var(--gray-800);
+    }
+    .cardProfileTexts {
+        strong {
+            color: var(--gray-800);
+        }
+        span {
+            color: var(--gray-800);
+        }
+    }
+    .cardProfileSociais {
+        span {
+            color: var(--gray-800);
+        }
+    }
+    .cardProfileNetwork {
+        background: var(--purple-500);
+        div {
+            span {
+                color: var(--white);
+            }
+        }
+    }
+    .alertMessage {
+        svg,
+        h1,
+        span {
+            color: var(--gray-800);
+        }
     }
 }
