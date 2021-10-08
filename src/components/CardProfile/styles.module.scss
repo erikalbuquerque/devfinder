@@ -141,3 +141,111 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    .cardProfileContainer {
+        header {
+            flex-wrap: wrap;
+            img {
+                width: 5rem;
+                height: 5rem;
+            }
+            span {
+                font-size: 1rem;
+                margin-left: 0;
+                margin-top: 2rem;
+            }
+            .cardProfileTexts {
+                gap: 0.5rem;
+                max-width: 175px;
+                strong {
+                    font-size: 1.25rem;
+                }
+                a {
+                    font-size: 1rem;
+                }
+                span {
+                    font-size: 1rem;
+                }
+            }
+        }
+        .cardProfileInformation {
+            align-items: center;
+            margin-top: 2rem;
+            margin-left: 0;
+            .cardProfileNetwork {
+                gap: 3rem;
+                padding: 2rem;
+                div {
+                    span {
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+            .cardProfileSociais {
+                flex-direction: column;
+                align-self: flex-start;
+                gap: 1rem;
+                div {
+                    flex-direction: column;
+                    span {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .cardProfileContainer {
+        header {
+            img {
+                width: 6rem;
+                height: 6rem;
+            }
+            span {
+                font-size: 0.813rem;
+                margin-left: auto;
+                margin-top: 0;
+            }
+            .cardProfileTexts {
+                gap: 0.5rem;
+                max-width: 175px;
+                strong {
+                    font-size: 1.25rem;
+                }
+                a {
+                    font-size: 1rem;
+                }
+                span {
+                    font-size: 1rem;
+                }
+            }
+        }
+        .cardProfileInformation {
+            margin-top: 2rem;
+            margin-left: 0;
+            .cardProfileNetwork {
+                gap: 4rem;
+                padding: 2rem;
+                div {
+                    span {
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+            .cardProfileSociais {
+                flex-direction: row;
+                align-self: flex-start;
+                gap: 4rem;
+                div {
+                    flex-direction: column;
+                    span {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
