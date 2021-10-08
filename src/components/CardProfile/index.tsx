@@ -51,7 +51,9 @@ export function CardProfile() {
 								</span>
 								<span className={user.blog ? '' : styles.notAvaliable}>
 									<BsLink45Deg />
-									{user.blog ? user.blog : 'Not Available'}
+									<a href={user.blog}>
+										{user.blog ? user.blog : 'Not Available'}
+									</a>
 								</span>
 							</div>
 							<div>
