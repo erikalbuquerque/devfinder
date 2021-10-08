@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+<div align="center">
+  <img src=".github/logo.png" width="20%" alt="devfinder" >
+  <h1>devfinder</h1>
+</div>
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About devfinder
 
-## Available Scripts
+devfider is a simple and fast alternative for searching github users and seeing their main information.
 
-In the project directory, you can run:
+## Theme
+| Dark | Light |
+:-------------------:|:-------------------:
+| ![](.github/dark.png) | ![](.github/light.png)
 
-### `yarn start`
+## Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project was development with the following technologies:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Sass](https://sass-lang.com/)
+- [React Hot Toast](https://react-hot-toast.com/)
 
-### `yarn test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to run
 
-### `yarn build`
+```bash
+# Clone the project and access its folder.
+git clone https://github.com/erikalbuquerque/devfinder.git
+cd devfinder
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# To start it, follow the steps below:
+# Install dependencies
+yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Start project
+yarn start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `yarn eject`
+:green_heart: by [Érik Albuquerque](https://github.com/erikalbuquerque)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<left>
+  <h4>You can find me around here:</h4>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[![Linkedin Badge](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/erik-albuquerque/)](https://www.linkedin.com/in/erik-albuquerque/)
+[![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:erik.albuquerque.oficial@gmail.com)](mailto:erik.albuquerque.oficial@gmail.com)
+<a href="https://www.instagram.com/albuquerik">
+<img height="20px" src="https://img.shields.io/badge/Instagram-E4405F?&style=for-the-badge&logo=Instagram&logoColor=white">
+</a>
+<a href="https://app.rocketseat.com.br/me/erik-albuquerque">
+<img height="20px" src="https://img.shields.io/badge/Rocketseat-8257E6?&style=for-the-badge&logo=apacherocketmq&logoColor=white">
+</a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+</left>
