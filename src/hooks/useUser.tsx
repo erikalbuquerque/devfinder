@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 
 interface UserProps {
   children: ReactNode;
@@ -36,6 +36,10 @@ export function UserProvider({ children }: UserProps){
     .then(response => response.json())
     .then(data => setUser(data))
   }
+
+  useEffect(() => {
+    searchUser('octocat')
+  }, [])
 
   return (
     <UserContext.Provider 
