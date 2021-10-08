@@ -1,17 +1,23 @@
 import { useState } from 'react';
 import { useUser } from '../../hooks/useUser';
 
+import toast, { Toaster } from 'react-hot-toast';
+
 import { FiSearch } from 'react-icons/fi';
 
 import styles from './styles.module.scss';
 
 export function SearchBar() {
-	const { searchUser } = useUser()
+	const { searchUser } = useUser();
 	const [ username, setUsername ] = useState('');
 
 	function handleSearch() {
+		if (!username) {
+			toast('Fill in the USERNAME field correctly!');
+			return;
+		}
 		searchUser(username);
-    setUsername('');
+		setUsername('');
 	}
 
 	return (
@@ -28,6 +34,15 @@ export function SearchBar() {
 					Search
 				</button>
 			</div>
+			<Toaster
+				position="top-right"
+				toastOptions={{
+					style: {
+						background: "#ff6161",
+						color: "#fff",
+					}
+				}}
+			/>
 		</div>
 	);
 }
